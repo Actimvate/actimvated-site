@@ -1,7 +1,5 @@
 # translate.actimvated.com
 
-Static website for Actimvated. No build step: upload these files to a GitHub repository and turn on GitHub Pages.
+Static site, no build step. Upload everything in this folder to the root of the GitHub Pages repository, replacing the old files. Keep the folder structure (assets/, languages/, services/, translation-agency-partner/).
 
-Files: index.html, favicon.svg, favicon.ico, apple-touch-icon.png, og-image.png (link preview image), CNAME (tells GitHub Pages the domain).
-
-To edit text: open index.html on GitHub, click the pencil icon, change the wording, Commit. The live site updates in about a minute.
+After uploading: submit https://translate.actimvated.com/sitemap.xml in Google Search Console and Bing Webmaster Tools.
