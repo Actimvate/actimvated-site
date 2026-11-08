@@ -156,11 +156,28 @@ a.lang{color:inherit}
 .ftcols a{color:var(--text);text-decoration:none}.ftcols a:hover{color:var(--ink);text-decoration:underline}
 @media (max-width:880px){.page-hero h1{font-size:38px}}
 .logo{display:inline-flex;align-items:center;gap:10px}.logo img{display:block}
-/* brand: gold, matching the Actimvated Studio monogram */
-:root{--a:#7A5C24;--b:#5C4318}
-.fl{background:linear-gradient(96deg,#A47A35 0%,#6B4E1C 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.dot{background:#B08D57}
-.tag{color:#5C4318;background:#F3EAD8}
-.agency li .dot{background:#C9A465}
-a:hover{color:#7A5C24}
-
+/* brand: multi-colour flow (cyan > violet > pink > orange) */
+:root{--a:#6D28D9;--b:#0E7490;--c1:#0E7490;--c2:#6D28D9;--c3:#BE185D;--c4:#C0400C;
+ --flow:linear-gradient(96deg,#0E7490 0%,#6D28D9 25%,#BE185D 50%,#C0400C 75%,#0E7490 100%);
+ --flow-bright:linear-gradient(96deg,#22D3EE 0%,#A78BFA 33%,#F472B6 66%,#FF6B35 100%)}
+.fl,.grad{background-image:var(--flow);background-size:200% auto;background-repeat:repeat-x;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:flow 12s linear infinite}
+.grad{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em;padding-right:.06em}
+@keyframes flow{0%{background-position:0% center}100%{background-position:-200% center}}
+.fact.anchor b{background-image:var(--flow);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:flow 12s linear infinite}
+.glow{position:relative;isolation:isolate}
+.glow::before{content:"";position:absolute;inset:-80px -10vw -220px;z-index:-1;pointer-events:none;background:radial-gradient(46% 50% at 72% 20%,rgba(167,139,250,.18),transparent 70%),radial-gradient(38% 40% at 14% 62%,rgba(34,211,238,.11),transparent 70%)}
+main{overflow-x:clip}
+.contact{position:relative;overflow:hidden;isolation:isolate}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(50% 60% at 50% 0%,rgba(167,139,250,.16),transparent 70%),radial-gradient(40% 50% at 50% 100%,rgba(255,107,53,.09),transparent 70%)}
+.quote{position:relative}
+.quote::before{content:"";position:absolute;inset:-1px;border-radius:17px;padding:1px;background:linear-gradient(135deg,rgba(167,139,250,.55),rgba(244,114,182,.3) 40%,rgba(255,107,53,.2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.dot{background:#A78BFA}
+.chip:nth-child(4n+1) .dot{background:#22D3EE}.chip:nth-child(4n+2) .dot{background:#A78BFA}.chip:nth-child(4n+3) .dot{background:#F472B6}.chip:nth-child(4n+4) .dot{background:#FF6B35}
+.tag{color:#5B21B6;background:#EDE9FE}
+.agency{position:relative;overflow:hidden;isolation:isolate}
+.agency::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(45% 60% at 85% 15%,rgba(167,139,250,.22),transparent 70%),radial-gradient(40% 55% at 10% 95%,rgba(34,211,238,.14),transparent 70%)}
+.agency li:nth-child(4n+1) .dot{background:#22D3EE}.agency li:nth-child(4n+2) .dot{background:#A78BFA}.agency li:nth-child(4n+3) .dot{background:#F472B6}.agency li:nth-child(4n+4) .dot{background:#FF6B35}
+.svc .n{color:#6D28D9}
+a:hover{color:#6D28D9}
+:focus-visible{outline-color:#6D28D9}
+@media (prefers-reduced-motion:reduce){.fl,.grad,.fact.anchor b{animation:none}}
