@@ -155,6 +155,21 @@ a.lang{color:inherit}
 .ftcols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px}
 .ftcols a{color:var(--text);text-decoration:none}.ftcols a:hover{color:var(--ink);text-decoration:underline}
 @media (max-width:880px){.page-hero h1{font-size:38px}}
+.qgrid input[type=text],.qgrid input[type=email],.qgrid input[type=tel]{height:48px;border:1px solid var(--border-2);border-radius:8px;padding:0 12px;font-size:16px;color:var(--ink);background:#fff;font-family:inherit;letter-spacing:0;text-transform:none;width:100%}
+.qgrid label[hidden]{display:none}
+.qrow{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.filebox{position:relative;display:flex;flex-direction:column;justify-content:center;gap:6px;min-height:120px;border:1.5px dashed var(--border-2);border-radius:10px;padding:18px 20px;background:#FCFCFD;cursor:pointer;transition:border-color .2s,background .2s}
+.filebox:hover,.filebox.has{border-color:#A78BFA;background:#FAF7FF}
+.filebox .fb-t{font-weight:600;color:var(--ink);font-size:16px}
+.filebox .fb-s{font-size:14px;color:var(--muted)}
+.filebox input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.msg{display:flex;flex-direction:column;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.msg textarea{min-height:120px;border:1px solid var(--border-2);border-radius:8px;padding:12px;font-size:16px;color:var(--ink);font-family:inherit;letter-spacing:0;text-transform:none;resize:vertical}
+.consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:14px;line-height:1.5;color:var(--text)}
+.consent input{margin-top:3px;width:18px;height:18px;flex:none}
+.qfoot button{border:none}
+.prose{max-width:760px}.prose h2{font-size:24px;margin:32px 0 10px}.prose p,.prose li{font-size:16px;line-height:1.7}
+
 .logo{display:inline-flex;align-items:center;gap:10px}.logo img{display:block}
 /* brand: multi-colour flow (cyan > violet > pink > orange) */
 :root{--a:#6D28D9;--b:#0E7490;--c1:#0E7490;--c2:#6D28D9;--c3:#BE185D;--c4:#C0400C;

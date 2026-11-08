@@ -33,9 +33,9 @@
  <div class="wrap hd">
   <a class="logo" href="/" aria-label="Actimvated Translation — home"><img src="/logo-mark.png" alt="" width="30" height="30">actimvated</a>
   <nav class="nav" aria-label="Main">
-   <a href="/languages/">Languages</a><a href="/#services">Services</a><a href="/#process">How we work</a><a href="/translation-agency-partner/">For agencies</a><a href="/#faq">FAQ</a><a href="/#contact">Contact</a>
+   <a href="/languages/">Languages</a><a href="/#services">Services</a><a href="/#process">How we work</a><a href="/translation-agency-partner/">For agencies</a><a href="/#faq">FAQ</a><a href="/contact/">Contact</a>
   </nav>
-  <a class="btn btn-dark" href="/#quote">Get a quote</a>
+  <a class="btn btn-dark" href="/contact/">Get a quote</a>
  </div>
 </header>
 <main id="main">
@@ -58,26 +58,45 @@
 </section>
 
 <section id="quote" class="wrap" style="padding-top:24px;padding-bottom:72px">
- <form class="quote" id="qform" data-from="English" data-to="Swahili" novalidate>
+ <form class="quote" id="qform" action="https://formsubmit.co/studio@actimvated.com" method="POST" enctype="multipart/form-data" data-to="Swahili">
+  <input type="hidden" name="_subject" id="q-subject" value="New quote request — translate.actimvated.com">
+  <input type="hidden" name="_next" value="https://translate.actimvated.com/thank-you/">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
   <div class="qhead">
-   <div class="eyebrow" style="color:var(--ink);display:flex;align-items:center;gap:10px"><span class="dot" style="background:#16A34A" aria-hidden="true"></span>Quote request</div>
-   <span class="pill">No signup</span>
+   <div class="eyebrow" style="color:var(--ink);display:flex;align-items:center;gap:10px"><span class="dot" style="background:#16A34A" aria-hidden="true"></span>Ready to start? Send your files</div>
+   <span class="pill">Reply within 1 business day</span>
   </div>
   <div class="qgrid">
-   <label>From<select id="q-from"></select></label>
-   <label>To<select id="q-to"></select></label>
-   <label>Subject area<select id="q-field"><option>General / business</option><option>Legal</option><option>Technical</option><option>Review / proofreading</option></select></label>
-   <label>Approx. word count<input id="q-words" type="number" min="1" inputmode="numeric" placeholder="e.g. 2500"></label>
-   <label>Needed by<input id="q-date" type="date"></label>
-   <label>Your email<input id="q-email" type="email" placeholder="you@company.com" autocomplete="email"></label>
+   <label>First name *<input name="First name" type="text" required autocomplete="given-name"></label>
+   <label>Last name *<input name="Last name" type="text" required autocomplete="family-name"></label>
+   <label>Email *<input name="email" id="q-email" type="email" required autocomplete="email" placeholder="you@company.com"></label>
+   <label>Phone / WhatsApp<input name="Phone" type="tel" autocomplete="tel" placeholder="Optional"></label>
+   <label>You are<select name="Client type" id="q-type"><option>An individual</option><option>A company</option><option>A translation agency</option></select></label>
+   <label id="q-company-wrap" hidden>Company name<input name="Company" id="q-company" type="text" autocomplete="organization"></label>
+   <label>Service<select name="Service" id="q-service"><option>Translation</option><option>Review / proofreading</option><option>MT post-editing</option><option>Agency partnership / free test</option><option>Something else</option></select></label>
+   <label>From<select name="From" id="q-from"><option>English</option><option>Arabic</option><option>Chinese</option><option>Danish</option><option>French</option><option>Greek</option><option>Korean</option><option>Latvian</option><option>Mongolian</option><option>Russian</option><option>Shona</option><option>Spanish</option><option>Swahili</option><option>Swedish</option><option>Turkish</option><option>Uzbek</option><option>Vietnamese</option></select></label>
+   <label>To<select name="To" id="q-to"><option>English</option><option>Arabic</option><option>Chinese</option><option>Danish</option><option>French</option><option>Greek</option><option>Korean</option><option>Latvian</option><option>Mongolian</option><option>Russian</option><option>Shona</option><option>Spanish</option><option>Swahili</option><option>Swedish</option><option>Turkish</option><option>Uzbek</option><option>Vietnamese</option></select></label>
+   <label>Subject area<select name="Subject area" id="q-field"><option>General / business</option><option>Legal</option><option>Technical</option><option>Not sure</option></select></label>
+   <label>Approx. word count<input name="Word count" id="q-words" type="number" min="1" inputmode="numeric" placeholder="If known"></label>
+   <label>Needed by<input name="Deadline" id="q-date" type="date"></label>
   </div>
   <p class="warn" id="q-warn" role="status" hidden>We translate between English and each of our 16 languages. Pick English on one side.</p>
+  <div class="qrow">
+   <label class="filebox" for="q-file">
+    <span class="fb-t">Upload your document</span>
+    <span class="fb-s" id="q-file-name">PDF, Word, Excel, images or ZIP · up to 10 MB in total. Several files? Put them in one ZIP.</span>
+    <input type="file" name="attachment" id="q-file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.rtf,.odt,.jpg,.jpeg,.png,.zip">
+   </label>
+   <label class="msg">Message<textarea name="Message" rows="4" placeholder="Anything we should know: purpose, audience, certification needs, or a download link for files over 10 MB."></textarea></label>
+  </div>
+  <label class="consent"><input type="checkbox" name="Consent" value="Yes" required> <span>I agree that Actimvated may use these details and files to prepare my quote, as described in the <a href="/privacy/">privacy notice</a>. *</span></label>
   <div class="qfoot">
    <div>
-    <div class="qsum" id="q-sum">English → Swahili · General / business · word count TBC</div>
-    <div class="qnote">Send it and we reply with a fixed price and delivery date within one business day. Attach your files to the email.</div>
+    <div class="qsum" id="q-sum">English → Swahili · General / business</div>
+    <div class="qnote">You get a fixed price and delivery date within one business day. Files are shared only with the linguists on your job.</div>
    </div>
-   <a class="btn btn-dark" id="q-send" href="mailto:studio@actimvated.com">Send the brief <span aria-hidden="true">→</span></a>
+   <button class="btn btn-dark" type="submit" id="q-send">Send for a quote <span aria-hidden="true">→</span></button>
   </div>
  </form>
 </section>
@@ -191,7 +210,7 @@
   <div><h2>Services</h2><ul><li><a href="/services/general-business-translation/">General &amp; business</a></li><li><a href="/services/legal-translation/">Legal</a></li><li><a href="/services/technical-translation/">Technical</a></li><li><a href="/services/review-proofreading-mtpe/">Review &amp; proofreading</a></li><li><a href="/translation-agency-partner/">For translation agencies</a></li><li><a href="/languages/">All languages</a></li></ul>
    <h2 style="margin-top:24px">Contact</h2><ul><li><a href="mailto:studio@actimvated.com">studio@actimvated.com</a></li><li><a href="mailto:support@actimvated.com">support@actimvated.com</a></li></ul></div>
  </div>
- <div class="wrap ft" style="padding-top:24px"><small>© <span id="yr">2026</span> Actimvated</small><small>translate.actimvated.com</small></div>
+ <div class="wrap ft" style="padding-top:24px"><small>© <span id="yr">2026</span> Actimvated · <a href="/privacy/" style="color:inherit">Privacy</a></small><small>translate.actimvated.com</small></div>
 </footer>
 <script src="/assets/site.js" defer></script>
 </body>
